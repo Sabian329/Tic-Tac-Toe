@@ -7,28 +7,38 @@
     <title>Tic-Tac Toe</title>
     <link rel="stylesheet" href="OX.css">
 </head>
-<body>  
-  <!-- <div class="input_div">
-  <input class="player_one" placeholder="Player One"><input type="button" onclick="addPlayerOne()" class="add_Btn1">
-  <input class ="player_two" placeholder="Player Two"><input type="button" onclick="addPlayerTwo()" class="add_Btn2">
-</div> -->
+<body> 
+  <div class="input_div">
+  <input class="player_one" placeholder="Player One">
+  <input type="button" onclick="addPlayerOne()" class="add_Btn1">
+  <input class ="player_two" placeholder="Player Two">
+  <input type="button" onclick="addPlayerTwo()" class="add_Btn2">
+  <audio id="myAudio">
+    <source src="Sounds/yt1s.com - Keyboard press  Sound Effect.mp3" type="audio/ogg">
+    <source src="Sounds/yt1s.com - Keyboard press  Sound Effect.mp3" type="audio/mpeg">
+</div>
   <div class="score">
     <p class="X_score"></p>
     <p class="O_score"></p>
   </div>
   <div class="cli" onclick="cli()">
   <div class="game_holder" onclick="clicker()">
-  <button class="game_btn1" onclick="drawFunction1()" ></button>
-  <button class="game_btn2" onclick="drawFunction2()" ></button>
-  <button class="game_btn3" onclick="drawFunction3()" ></button>
-  <button class="game_btn4" onclick="drawFunction4()" ></button>
-  <button class="game_btn5" onclick="drawFunction5()" ></button>
-  <button class="game_btn6" onclick="drawFunction6()" ></button>
-  <button class="game_btn7" onclick="drawFunction7()" ></button>
-  <button class="game_btn8" onclick="drawFunction8()" ></button>
-  <button class="game_btn9" onclick="drawFunction9()" ></button>
+  <button class="game_btn1" onclick="drawFunction1(); this.onclick=null;" ></button>
+  <button class="game_btn2" onclick="drawFunction2(); this.onclick=null;" ></button>
+  <button class="game_btn3" onclick="drawFunction3(); this.onclick=null;" ></button>
+  <button class="game_btn4" onclick="drawFunction4(); this.onclick=null;" ></button>
+  <button class="game_btn5" onclick="drawFunction5(); this.onclick=null;" ></button>
+  <button class="game_btn6" onclick="drawFunction6(); this.onclick=null;" ></button>
+  <button class="game_btn7" onclick="drawFunction7(); this.onclick=null;" ></button>
+  <button class="game_btn8" onclick="drawFunction8(); this.onclick=null;" ></button>
+  <button class="game_btn9" onclick="drawFunction9(); this.onclick=null;" ></button>
 </div> 
 </div>
+
+
+<audio id="myAudioWin">
+  <source src="Sounds/Cartoon Jump - Sound Effect.mp3" type="audio/ogg">
+  <source src="Sounds/Cartoon Jump - Sound Effect.mp3" type="audio/mpeg">
 <script src="OX.js"></script>
 </body>
 

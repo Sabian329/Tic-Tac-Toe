@@ -10,22 +10,31 @@ var playerOneBtn = document.querySelector(".add_Btn1");
 var playerTwo = document.querySelector(".player_two");
 var playerTwoBtn = document.querySelector(".add_Btn2");
 
+var clickSoud = document.querySelector("#myAudio");
+
+var winSound = document.querySelector("#myAudioWin");
+
+
 function addPlayerOne(){
-      var txtPlayers = document.createTextNode(playerOne.value);
+      var txtPlayers = document.createTextNode('1. '+playerOne.value);
       pX.appendChild(txtPlayers);
       playerOne.style.display = "none";
       playerOneBtn.style.display = "none";
-      playerOne.style.textTransform = "capitalize";
-};
+      playerOne.style.textAlign= "center";
+      clickSoud.play();
+}
 function addPlayerTwo(){
-      var txtPlayers = document.createTextNode(playerTwo.value);
+      var txtPlayers = document.createTextNode("2. "+playerTwo.value);
       pO.appendChild(txtPlayers);
       playerTwo.style.display = "none";
       playerTwoBtn.style.display = "none";
+      playerTwo.style.textAlign= "center";
+      clickSoud.play();
 }
 
 var clicks = 0;
 function clicker(){
+      clickSoud.play();
 clicks++;
 if(clicks == 10){
       location.reload();
@@ -54,7 +63,6 @@ function drawFunction1(){
       b1.appendChild(txtx);
       };
       console.log(b1.textContent+1);
-      
 };
 function drawFunction2(){     
       if(clicks % 2 === 0){
@@ -144,20 +152,20 @@ function cli(){
 if(b4.textContent == "O" &&b5.textContent == "O" && b6.textContent == "O" ||
 b1.textContent == "O" &&b2.textContent == "O" && b3.textContent == "O" ||
 b7.textContent == "O" &&b8.textContent == "O" && b9.textContent == "O" ||
-b1.textContent == "O" &&b3.textContent == "O" && b7.textContent == "O" ||
+b1.textContent == "O" &&b4.textContent == "O" && b7.textContent == "O" ||
 b2.textContent == "O" &&b5.textContent == "O" && b8.textContent == "O"||
 b3.textContent == "O" &&b6.textContent == "O" && b9.textContent == "O"||
 b1.textContent == "O" &&b5.textContent == "O" && b9.textContent == "O"||
-b3.textContent == "O" &&b5.textContent == "O" && b7.textContent == "O"){
+b3.textContent == "O" &&b5.textContent == "O" && b7.textContent == "O" ){
       var pO = document.querySelector(".O_score");
       
-      var scoreO = document.createTextNode("Win !");
-
+      var scoreO = document.createTextNode(" Win !");
        var refreshPng = document.createElement("img");
       refreshPng.src = "icons/refresh.png";
       refreshPng.onclick = startAgain;
       pO.appendChild(scoreO);
       pO.appendChild(refreshPng);
+      
 
       refreshPng.style.width = ("35px");
       refreshPng.style.height = ("35px");
@@ -166,11 +174,12 @@ b3.textContent == "O" &&b5.textContent == "O" && b7.textContent == "O"){
       function startAgain(){
             location.reload();
       };
+
       
 }else if(b4.textContent == "X" &&b5.textContent == "X" && b6.textContent == "X"||
 b1.textContent == "X" &&b2.textContent == "X" && b3.textContent == "X" ||
 b7.textContent == "X" &&b8.textContent == "X" && b9.textContent == "X"||
-b1.textContent == "X" &&b3.textContent == "X" && b7.textContent == "X"||
+b1.textContent == "X" &&b4.textContent == "X" && b7.textContent == "X"||
 b2.textContent == "X" &&b5.textContent == "X" && b8.textContent == "X"||
 b3.textContent == "X" &&b6.textContent == "X" && b9.textContent == "X"||
 b1.textContent == "X" &&b5.textContent == "X" && b9.textContent == "X"||
@@ -193,6 +202,5 @@ b3.textContent == "X" &&b5.textContent == "X" && b7.textContent == "X"){
       }; 
       }
 };
-
 
 

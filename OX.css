@@ -35,23 +35,20 @@ p{
   justify-content: center;
   flex-wrap: wrap; 
   width: 600px;
-  height: 600px;
+  height: 500px;
   background-color: rgba(97, 97, 97, 0);
 }
 button{
-  margin: 0px 0px;
   font-size: 4rem;
   width: 180px;
   height: 180px;
-  margin: 10px;
   border: unset;
-  background-color: rgba(70, 70, 70, 0.562);
-  border-radius: 20px;
+  background-color: rgba(70, 70, 70, 0);
   color: rgba(240, 248, 255, 0.685);
-
+border: solid rgb(122, 122, 122);
 }
 button:hover{
-  background-color: rgba(70, 70, 70, 0.945);
+  background-color: rgba(70, 70, 70, 0.137);
 }
 
 .player_one, .player_two{
@@ -62,16 +59,51 @@ button:hover{
   border: none;
   font-size: 2rem;
   color: white;
-  border-radius: 10px 0px;
+  border-radius: 10px 10px;
+  
 }
 .add_Btn1, .add_Btn2{
-  height: 30px;
-  width: 20px;
-  background-color: rgba(0, 0, 0, 0.582);
+  width: 150px;
+  background-color: rgba(94, 255, 0, 0.459);
   border: none;
   margin-left:5px;
+ margin-top: 10px;
   border-radius: 10px;
 }
 .add_Btn1:hover, .add_Btn2:hover{
   background-color: rgb(0, 0, 0);
+}
+.input_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game_btn1{
+  border-top: unset;
+  border-left: unset;
+}
+.game_btn2{
+  border-top: unset;
+}
+.game_btn3{
+  border-right: unset;
+  border-top: unset;
+}
+.game_btn4{
+  border-left: unset;
+}
+.game_btn6{
+  border-right: unset;
+}
+.game_btn7{
+  border-bottom: unset;
+  border-left: unset;
+}
+.game_btn8{
+  border-bottom: unset;
+}
+.game_btn9{
+  border-right: unset;
+  border-bottom: unset;
 }
